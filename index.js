@@ -29,7 +29,7 @@ class Usuario {
   }
 }
 
-const jonathanS = new Usuario(
+const usuario = new Usuario(
   "Jonathan",
   "Sansó",
   [
@@ -45,18 +45,18 @@ const jonathanS = new Usuario(
   ["perro", "gato", "pez"]
 );
 
-console.log(jonathanS); 
+console.log(usuario); 
 
-console.log(jonathanS.getfullName()); 
-console.log(jonathanS.addMascota('loro')); 
+console.log(usuario.getfullName()); 
+console.log(usuario.addMascota('loro')); 
 
-console.log(jonathanS.countMascotas()); 
+console.log(usuario.countMascotas()); 
 
 console.log(
-  jonathanS.addBook(
+  usuario.addBook(
     "El señor de los anillos",
     "J.R.R. Tolkien"
   )
 ); 
 
-console.log(jonathanS.getBooksNames()); 
+console.log(usuario.getBooksNames()); 
