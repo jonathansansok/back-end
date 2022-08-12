@@ -20,7 +20,7 @@ class Usuario {
   }
 
   addBook(name, autor) {
-    this.libros.push(name, autor);
+    this.libros.push({name, autor});
     return this.libros;
   }
 
@@ -45,19 +45,18 @@ const jonathanS = new Usuario(
   ["perro", "gato", "pez"]
 );
 
-console.log(jonathanS); //bien
+console.log(jonathanS); 
 
-console.log(jonathanS.getfullName()); //bien
+console.log(jonathanS.getfullName()); 
+console.log(jonathanS.addMascota('loro')); 
 
-console.log(jonathanS.addMascota('loro')); //falta
-
-console.log(jonathanS.countMascotas()); //bien
+console.log(jonathanS.countMascotas()); 
 
 console.log(
   jonathanS.addBook(
     "El señor de los anillos",
     "J.R.R. Tolkien"
   )
-); //falta
+); 
 
-console.log(jonathanS.getBooksNames()); //bien
+console.log(jonathanS.getBooksNames()); 
