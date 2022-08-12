@@ -49,15 +49,31 @@ console.log(jonathanS); //bien
 
 console.log(jonathanS.getfullName()); //bien
 
-console.log(jonathanS.addMascota('loro')); //falta
+console.log(jonathanS.addMascota("loro")); //falta
 
 console.log(jonathanS.countMascotas()); //bien
 
 console.log(
   jonathanS.addBook({
-    name:"El señor de los anillos",
-    autor: "J.R.R. Tolkien"
+    name: "El señor de los anillos",
+    autor: "J.R.R. Tolkien",
   })
 ); //falta
 
 console.log(jonathanS.getBooksNames()); //bien
+
+///crea un objeto llamado usuario con valores arbitrarios e invocar sus metodos
+
+const usuario = {
+  nombre: "Steven",
+  edad: 29,
+  apellido: "Slate",
+  mascotas: {
+    perros: ["scott", "rosco"],
+    gatos: ["wisk", "chow"],
+  },
+  programas: {
+    vmr: ["grey", "red", "mu"],
+    mics: ["condenser", "dynamic", "omni"],
+  },
+};
