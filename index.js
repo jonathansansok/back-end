@@ -1,39 +1,63 @@
 class Usuario {
-  constructor(nombre, apellido, libros, mascotas){
-      this.nombre= nombre;
-      this.apellido = apellido;
-      this.libros = libros;
-      this.mascotas = mascotas;
+  constructor(nombre, apellido, libros, mascotas) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.libros = libros;
+    this.mascotas = mascotas;
   }
 
+  getfullName() {
+    return `${this.nombre} ${this.apellido}`;
+  }
 
-/* 
-  getfullName() */
+  addMascota() {
+    this.mascotas.push();
+    return this.mascotas;
+  }
 
+  countMascotas() {
+    return this.mascotas.length;
+  }
+
+  addBook() {
+    this.libros.push();
+    return this.libros;
+  }
+
+  getBooksNames() {
+    return this.libros.map((busqueda) => busqueda.name);
+  }
 }
 
-
-
 let jonathanS = new Usuario(
-  'jonathan', 
-  'sanso',
+  "Jonathan",
+  "Sansó",
   [
-    barrioChino =
     {
-      autor: 'juan sanso',
-      titulo:  'barrioChino',
-      editorial: 'Terra'
-    }
-    ,
-    cuentoDeHadas =
+      name: "Mistery Tour",
+      autor: "Rupert Bort",
+    },
     {
-      autor: 'John Smith',
-      titulo:  'cuentoDeHadas',
-      editorial: 'Las Marianas'
-    }
+      name: "Be Here Now",
+      autor: "John Smith",
+    },
   ],
-  ['perro', 'gato', 'pez']
-)
+  ["perro", "gato", "pez"]
+);
 
+console.log(jonathanS); //bien
 
-console.log(jonathanS);
+console.log(jonathanS.getfullName()); //bien
+
+console.log(jonathanS.addMascota('loro')); //falta
+
+console.log(jonathanS.countMascotas()); //bien
+
+console.log(
+  jonathanS.addBook(
+    "El señor de los anillos",
+    "J.R.R. Tolkien"
+  )
+); //bien
+
+console.log(jonathanS.getBooksNames()); //bien
