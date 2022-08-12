@@ -10,8 +10,8 @@ class Usuario {
     return `${this.nombre} ${this.apellido}`;
   }
 
-  addMascota() {
-    this.mascotas.push();
+  addMascota(nombre) {
+    this.mascotas.push(nombre);
     return this.mascotas;
   }
 
@@ -19,8 +19,8 @@ class Usuario {
     return this.mascotas.length;
   }
 
-  addBook() {
-    this.libros.push({});
+  addBook(name, autor) {
+    this.libros.push(name, autor);
     return this.libros;
   }
 
@@ -29,7 +29,7 @@ class Usuario {
   }
 }
 
-let jonathanS = new Usuario(
+const jonathanS = new Usuario(
   "Jonathan",
   "Sansó",
   [
@@ -54,10 +54,10 @@ console.log(jonathanS.addMascota('loro')); //falta
 console.log(jonathanS.countMascotas()); //bien
 
 console.log(
-  jonathanS.addBook({
-    name:"El señor de los anillos",
-    autor: "J.R.R. Tolkien"
-  })
+  jonathanS.addBook(
+    "El señor de los anillos",
+    "J.R.R. Tolkien"
+  )
 ); //falta
 
 console.log(jonathanS.getBooksNames()); //bien
