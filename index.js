@@ -20,7 +20,7 @@ class Usuario {
   }
 
   addBook() {
-    this.libros.push();
+    this.libros.push({});
     return this.libros;
   }
 
@@ -54,10 +54,10 @@ console.log(jonathanS.addMascota('loro')); //falta
 console.log(jonathanS.countMascotas()); //bien
 
 console.log(
-  jonathanS.addBook(
-    "El señor de los anillos",
-    "J.R.R. Tolkien"
-  )
+  jonathanS.addBook({
+    name:"El señor de los anillos",
+    autor: "J.R.R. Tolkien"
+  })
 ); //falta
 
 console.log(jonathanS.getBooksNames()); //bien
